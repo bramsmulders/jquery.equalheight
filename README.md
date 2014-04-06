@@ -1,4 +1,8 @@
-jquery.equalheight
-==================
+#jquery.equalheight - v1.0.0
 
-Equalheight in rows
+Make all columns equal in height per row
+
+##Usage
+```Javascript
+$('.js--equalheight').equalHeight();
+```
