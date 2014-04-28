@@ -1,8 +1,13 @@
-#jquery.equalheight - v1.0.0
+#jquery.equalheight - v1.0.1
 
 Make all columns equal in height per row
 
-##Usage
+## Installation
+* [Bower](http://bower.io/): `bower install --save jquery.equalheight`
+* Download: [zip](https://github.com/bramsmulders/jquery.equalheight/zipball/master)
+* Git: `git clone https://github.com/bramsmulders/jquery.equalheight`
+
+## Usage
 ```Javascript
 $('.js--equalheight').equalHeight();
 ```
