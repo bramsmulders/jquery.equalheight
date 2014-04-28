@@ -15,7 +15,7 @@
         $(this).each(function() {
             $el = $(this);
             $el.css({'min-height':'0'});
-            topPosition = $el.position().top;
+            topPosition = $el.offset().top;
             if (currentRowStart != topPosition) {
                 // we just came to a new row.  Set all the heights on the completed row
                 for (var currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
