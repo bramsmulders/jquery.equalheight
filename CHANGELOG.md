@@ -1,5 +1,9 @@
 == HEAD
 
+== 1.0.3 (Jun 04, 2014)
+
+* Added property & reset properties
+
 == 1.0.2 (Apr 28, 2014)
 
 * use offset().top instead of position().top
