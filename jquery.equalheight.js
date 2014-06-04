@@ -1,4 +1,4 @@
-/*  equalheight - v1.0.2
+/*  equalheight - v1.0.3
     MIT license
     Normalizes height based on rows
     @author: Bram Smulders - @bramsmulders
