@@ -1,11 +1,19 @@
-/*  equalheight - v1.0.2
+/*  equalheight - v1.0.3
     MIT license
     Normalizes height based on rows
     @author: Bram Smulders - @bramsmulders
 \*----------------------------------------------------------------------------*/
 
 (function($) {
-    $.fn.equalHeight = function() {
+    $.fn.equalHeight = function(prop, reset) {
+        var property = 'min-height';
+        if(prop !== undefined) {
+            property = prop;
+        }
+        var resetValue = '0';
+        if(reset !== undefined) {
+            resetValue = reset;
+        }
         var currentTallest = 0;
         var currentRowStart = 0;
         var rowDivs = new Array();
@@ -14,12 +22,12 @@
 
         $(this).each(function() {
             $el = $(this);
-            $el.css({'min-height':'0'});
+            $el.css(property, resetValue);
             topPosition = $el.offset().top;
             if (currentRowStart != topPosition) {
                 // we just came to a new row.  Set all the heights on the completed row
                 for (var currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-                    rowDivs[currentDiv].css({'min-height': currentTallest});
+                    rowDivs[currentDiv].css(property, currentTallest);
                 }
                 // set the variables for the new row
                 rowDivs.length = 0; // empty the array
@@ -34,7 +42,7 @@
 
             // do the last row
             for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-                rowDivs[currentDiv].css({'min-height': currentTallest});
+                rowDivs[currentDiv].css(property, currentTallest);
             }
         });
         return this;
